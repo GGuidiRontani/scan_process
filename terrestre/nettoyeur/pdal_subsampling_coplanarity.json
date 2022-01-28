@@ -1,0 +1,49 @@
+[
+  {
+       "type": "readers.las",
+	   "filename":"E:/usine/stage4_tile/2021_lgp00017_COMPONENT_1_2021-10-20_10h19_00_920_1.laz",
+       "tag": "input_original"
+  },
+  {
+        "type":"filters.voxelcentroidnearestneighbor",
+        "cell":0.001,
+        "tag": "subsample",
+        "inputs": "input_original"
+  },
+  {
+        "type": "filters.approximatecoplanar",
+        "knn":100,
+        "thresh1":6,
+        "thresh2":2,
+        "tag": "cloud_planarity",
+        "inputs": "subsample"
+  },
+  {
+        "type": "filters.range",
+        "limits": "Coplanar[1:1]",
+        "tag": "plans",
+        "inputs": "cloud_planarity"
+  },
+  {
+        "type": "filters.range",
+        "limits": "Coplanar[0:0]",
+        "tag": "aretes",
+        "inputs": "cloud_planarity"
+  },
+  {
+        "type": "filters.sample",
+        "radius": "0.1",
+        "tag": "plans_ss",
+        "inputs": "plans"
+  },
+  {
+        "type": "filters.merge",
+        "inputs":["plans_ss", "aretes"]
+  },
+  {
+        "type": "writers.las",
+		"filename":"E:/usine/test.laz",
+        "compression":"laszip",
+        "a_srs":"EPSG:2154"
+  }
+]

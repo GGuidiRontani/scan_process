@@ -1,0 +1,20 @@
+[
+    {
+        "type" : "readers.las"
+    },
+    {
+        "type":"filters.reprojection",
+        "in_srs":"EPSG:2154",
+        "out_srs":"EPSG:3950"
+    },
+    {
+        "type":"filters.voxelcentroidnearestneighbor",
+        "cell":0.005
+    },
+	{
+		"type" : "writers.las",
+		"compression":"laszip",
+		"extra_dims" : "all",
+		"minor_version": 4
+	}
+]

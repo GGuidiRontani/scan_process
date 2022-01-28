@@ -1,0 +1,20 @@
+[
+    {
+        "type" : "readers.las"
+    },
+    {
+        "type":"filters.reprojection"
+    },
+    {
+        "type":"filters.crop"
+    },
+    {
+        "type":"filters.voxelcentroidnearestneighbor"
+    },
+	{
+		"type" : "writers.las",
+		"compression":"laszip",
+		"extra_dims" : "all",
+		"minor_version": 4
+	}
+]

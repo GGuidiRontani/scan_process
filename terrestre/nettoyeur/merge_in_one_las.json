@@ -1,0 +1,15 @@
+[
+    {
+        "type" : "readers.las",
+		"filename":"*.laz",
+		"override_srs":"EPSG:2154"
+    },
+	{
+		"type" : "filters.merge"
+	},
+	{
+		"type" : "writers.las",
+		"extra_dims" : "all",
+		"compression":"laszip"
+	}
+]

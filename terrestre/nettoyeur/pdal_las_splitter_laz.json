@@ -1,0 +1,15 @@
+[
+    {
+        "type":"readers.las"
+    },
+    {
+        "type":"filters.splitter",
+        "length":"5",
+		"buffer":"1"
+    },
+	{
+		"type": "writers.las",
+		"compression":"laszip",
+		"minor_version":"4"
+	}
+]

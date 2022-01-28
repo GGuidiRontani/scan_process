@@ -1,0 +1,16 @@
+{
+    "pipeline": [
+    {
+        "type":"readers.las",
+        "compression":"laszip"
+    },
+    {
+        "type":"writers.las",
+		"a_srs":"EPSG:3950",
+        "compression":"laszip",
+        "offset_x":"0.001",
+        "offset_y":"0.001",
+        "offset_z":"0.001"
+    }
+    ]
+}

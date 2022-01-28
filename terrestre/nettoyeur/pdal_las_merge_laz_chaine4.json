@@ -1,0 +1,17 @@
+[
+    {
+        "type" : "readers.las",
+		"filename":"*.laz"
+    },
+	{
+		"type":"filters.merge"
+	},
+	{
+		"type":"writers.las",
+		"extra_dims":"all",
+		"compression":"laszip",
+		"offset_x":"0.001",
+		"offset_y":"0.001",
+		"offset_z":"0.001"
+	}
+]

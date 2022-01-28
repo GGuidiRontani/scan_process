@@ -1,0 +1,3028 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command-line to run this workspace:
+#        D:\applications\fme\2020_2_1\fme.exe E:\2018_lidar_conversion\ifc2obj.fmw
+#              --SourceDataset_IFC "E:\2021_lille_gare_lille_europe\maillages\MEL-TRA-LIL Métro Lille-Europe.ifc"
+#              --DestDataset_OBJ "E:\2021_lille_gare_lille_europe\maillages\test"
+#    
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="4023.2 3365.5"
+#!   DOC_TOP_LEFT="-202.1 -3380"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="20806"
+#!   FME_DOCUMENT_GUID="8dabcef0-6038-43ca-a56a-d426dc224619"
+#!   FME_DOCUMENT_PRIORGUID=""
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2020.2.1.0 (20201130 - Build 20806 - WIN64)"
+#!   LAST_SAVE_DATE="2021-11-16T10:59:59"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="37"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="Yes"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="YES"
+#!   TITLE=""
+#!   USAGE=""
+#!   USE_MARKDOWN=""
+#!   VIEW_POSITION="-1196.3 219.729"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="64"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="IFC"
+#!   DATASET="$(SourceDataset_IFC)"
+#!   KEYWORD="IFC_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="ifc_parent_id string ifc_unique_id string ifc_material.name string ifc_instance_name instance ifc_representation instance ifc_context_type string multi_reader_type char(50) ifc_material.layer{}.is_ventilated string fme_feature_type char(50) fme_fill_color char(50) ifc_object_placement instance ifc_parent_unique_id string fme_type char(50) multi_reader_full_id int ifc_material.material{}.name string ifc_native_attribute_type string fme_start_angle number multi_reader_keyword char(50) ifc_is_decomposed_by{} instance ifc_is_contained_in instance fme_basename char(50) fme_dataset char(50) fme_primary_axis number fme_rotation number fme_text_size number ifc_id string ifc_representations{}.type string ifc_attribute_type string ifc_type string ifc_material.layer{}.name string fme_sweep_angle number ifc_representation_identifier string ifc_context_dimension string ifc_material.layer_set_name string fme_geometry char(50) multi_reader_id int ifc_entity_type string ifc_context_precision string fme_color char(50) ifc_contains{} instance fme_secondary_axis number ifc_material.layer{}.thickness string ifc_representations{}.identifier string fme_text_string char(50) ifc_decomposes instance"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   FTTR_TYPE="LISTBOX_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="20806"
+#!   COORDSYS="EPSG:3950"
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="ifc file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="Object1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Object"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the IFC file(s)"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="OBJ"
+#!   DATASET="$(DestDataset_OBJ)"
+#!   KEYWORD="OBJ_1"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="200"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="false"
+#!   EXPOSABLE_ATTRS="fme_primary_axis string fme_secondary_axis string fme_type string fme_basename string fme_text_size string fme_text_string string fme_fill_color string fme_color string fme_rotation string fme_sweep_angle string obj_type string fme_start_angle string fme_geometry string fme_feature_type string fme_dataset string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   FTTR_TYPE=""
+#!   GENERATE_FME_BUILD_NUM="20806"
+#!   COORDSYS="EPSG:3950"
+#!   FANOUT_EXPRESSION=""
+#!   FANOUT_GROUP="NO"
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="OBJ_OUT_WRITE_FME_VERSION"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="obj file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="OBJ File"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the OBJ file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a folder for the OBJ file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="binary"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="binary(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="binary(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="bool"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="enumeration"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="generic"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="logical"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="real"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="real(width)"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="real(11)"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="real(20)"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="real(20)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="select"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="varchar(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="instance"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="geometry"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="IFC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="OBJ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="OBJ"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_polygon"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_line"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_polygon"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_polygon"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_surface"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_solid"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_bounding_box"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_polygon"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_polygon"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="ifc_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="IFC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_face"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_face"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_face"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_face"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_face"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_face"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_face"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_point"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_line"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_face"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_face"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="OBJ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="obj_face"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="OBJ"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcBeam"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="2"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -124.5"
+#!   BOUNDING_RECT="20 -124.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcBeam"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="3"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -124.5"
+#!   BOUNDING_RECT="3100 -124.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcBuilding"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="4"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -249"
+#!   BOUNDING_RECT="20 -249 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LongName" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CompositionType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElevationOfRefHeight" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElevationOfTerrain" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingAddress.Purpose" ATTR_TYPE="enumeration" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingAddress.Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingAddress.UserDefinedPurpose" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingAddress.InternalLocation" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingAddress.AddressLines" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingAddress.PostalBox" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingAddress.Town" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingAddress.Region" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingAddress.PostalCode" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingAddress.Country" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcBuilding"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="5"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -249"
+#!   BOUNDING_RECT="3100 -249 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcBuildingElementProxy"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="6"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="-132.10000000000002 -373.5"
+#!   BOUNDING_RECT="-132.10000000000002 -373.5 606.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CompositionType" ATTR_TYPE="enumeration" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcBuildingElementProxy"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="7"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -373.5"
+#!   BOUNDING_RECT="3100 -373.5 606.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcBuildingStorey"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="8"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="-4.0999999999999091 -498"
+#!   BOUNDING_RECT="-4.0999999999999091 -498 478.09999999999997 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LongName" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CompositionType" ATTR_TYPE="enumeration" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Elevation" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcBuildingStorey"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="9"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -498"
+#!   BOUNDING_RECT="3100 -498 478.09999999999997 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcColumn"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="10"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -622.5"
+#!   BOUNDING_RECT="20 -622.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcColumn"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="11"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -622.5"
+#!   BOUNDING_RECT="3100 -622.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcDoor"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="12"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -747"
+#!   BOUNDING_RECT="20 -747 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OverallHeight" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OverallWidth" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcDoor"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="13"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -747"
+#!   BOUNDING_RECT="3100 -747 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcFlowSegment"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="14"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="9.9000000000000909 -871.5"
+#!   BOUNDING_RECT="9.9000000000000909 -871.5 464.09999999999997 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcFlowSegment"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="15"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -871.5"
+#!   BOUNDING_RECT="3100 -871.5 464.09999999999997 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcFlowTerminal"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="16"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="13.900000000000091 -996"
+#!   BOUNDING_RECT="13.900000000000091 -996 460.09999999999997 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcFlowTerminal"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="17"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -996"
+#!   BOUNDING_RECT="3100 -996 460.09999999999997 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcFurnishingElement"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="18"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="-76.100000000000023 -1120.5"
+#!   BOUNDING_RECT="-76.100000000000023 -1120.5 550.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcFurnishingElement"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="19"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -1120.5"
+#!   BOUNDING_RECT="3100 -1120.5 550.09999999999991 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcMember"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="20"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -1245"
+#!   BOUNDING_RECT="20 -1245 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcMember"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="21"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -1245"
+#!   BOUNDING_RECT="3100 -1245 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcOpeningElement"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="22"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="-41.100000000000023 -1369.5"
+#!   BOUNDING_RECT="-41.100000000000023 -1369.5 515.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcOpeningElement"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="23"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -1369.5"
+#!   BOUNDING_RECT="3100 -1369.5 515.09999999999991 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcProject"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="24"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -1494"
+#!   BOUNDING_RECT="20 -1494 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LongName" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Phase" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcProject"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="25"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -1494"
+#!   BOUNDING_RECT="3100 -1494 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcRailing"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="26"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -1618.5"
+#!   BOUNDING_RECT="20 -1618.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PredefinedType" ATTR_TYPE="enumeration" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcRailing"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="27"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -1618.5"
+#!   BOUNDING_RECT="3100 -1618.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcRamp"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="28"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -1743"
+#!   BOUNDING_RECT="20 -1743 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ShapeType" ATTR_TYPE="enumeration" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcRamp"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="29"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -1743"
+#!   BOUNDING_RECT="3100 -1743 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcRoof"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="30"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -1867.5"
+#!   BOUNDING_RECT="20 -1867.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ShapeType" ATTR_TYPE="enumeration" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcRoof"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="31"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -1867.5"
+#!   BOUNDING_RECT="3100 -1867.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcSite"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="32"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -1992"
+#!   BOUNDING_RECT="20 -1992 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LongName" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CompositionType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RefLatitude" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RefLongitude" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RefElevation" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LandTitleNumber" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SiteAddress.Purpose" ATTR_TYPE="enumeration" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SiteAddress.Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SiteAddress.UserDefinedPurpose" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SiteAddress.InternalLocation" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SiteAddress.AddressLines" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SiteAddress.PostalBox" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SiteAddress.Town" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SiteAddress.Region" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SiteAddress.PostalCode" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="SiteAddress.Country" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcSite"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="33"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -1992"
+#!   BOUNDING_RECT="3100 -1992 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcSlab"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="34"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -2116.5"
+#!   BOUNDING_RECT="20 -2116.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PredefinedType" ATTR_TYPE="enumeration" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcSlab"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="35"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -2116.5"
+#!   BOUNDING_RECT="3100 -2116.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcSpace"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="36"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -2241"
+#!   BOUNDING_RECT="20 -2241 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LongName" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CompositionType" ATTR_TYPE="enumeration" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InteriorOrExteriorSpace" ATTR_TYPE="enumeration" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElevationWithFlooring" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcSpace"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="37"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -2241"
+#!   BOUNDING_RECT="3100 -2241 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcStair"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="38"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -2365.5"
+#!   BOUNDING_RECT="20 -2365.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ShapeType" ATTR_TYPE="enumeration" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcStair"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="39"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -2365.5"
+#!   BOUNDING_RECT="3100 -2365.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcStairFlight"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="40"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -2490"
+#!   BOUNDING_RECT="20 -2490 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="NumberOfRiser" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="NumberOfTreads" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RiserHeight" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="TreadLength" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcStairFlight"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="41"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -2490"
+#!   BOUNDING_RECT="3100 -2490 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcWall"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="42"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -2614.5"
+#!   BOUNDING_RECT="20 -2614.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcWall"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="43"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -2614.5"
+#!   BOUNDING_RECT="3100 -2614.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcWallStandardCase"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="44"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="-68.100000000000023 -2739"
+#!   BOUNDING_RECT="-68.100000000000023 -2739 542.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcWallStandardCase"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="45"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -2739"
+#!   BOUNDING_RECT="3100 -2739 542.09999999999991 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcWindow"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="46"
+#!   FEAT_GEOMTYPE="ifc_no_geom ifc_point ifc_line ifc_polygon ifc_surface ifc_solid ifc_text ifc_bounding_box ifc_collection"
+#!   POSITION="20 -2863.5"
+#!   BOUNDING_RECT="20 -2863.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OverallHeight" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="OverallWidth" ATTR_TYPE="real" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Axis" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Body" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Box" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FootPrint" ATTR_TYPE="geometry" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_parent_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_object_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcWindow"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="47"
+#!   FEAT_GEOMTYPE="obj_face obj_point obj_line obj_face obj_face obj_face obj_point obj_face obj_collection"
+#!   POSITION="3100 -2863.5"
+#!   BOUNDING_RECT="3100 -2863.5 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="IfcTypeObject"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="48"
+#!   FEAT_GEOMTYPE="ifc_no_geom"
+#!   POSITION="20 -2988"
+#!   BOUNDING_RECT="20 -2988 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_type_name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_unique_id" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GlobalId" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Description" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ApplicableOccurrence" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Tag" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PredefinedType" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="IfcTypeObject"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="49"
+#!   FEAT_GEOMTYPE="obj_face"
+#!   POSITION="3100 -2988"
+#!   BOUNDING_RECT="3100 -2988 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="QuantitySetDefinition"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="50"
+#!   FEAT_GEOMTYPE="ifc_no_geom"
+#!   POSITION="-75.100000000000023 -3112.5"
+#!   BOUNDING_RECT="-75.100000000000023 -3112.5 549.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_quantities{}.name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_quantities{}.type" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_quantity_set_name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="QuantitySetDefinition"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="51"
+#!   FEAT_GEOMTYPE="obj_face"
+#!   POSITION="3100 -3112.5"
+#!   BOUNDING_RECT="3100 -3112.5 549.09999999999991 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="PropertySetDefinition"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="52"
+#!   FEAT_GEOMTYPE="ifc_no_geom"
+#!   POSITION="-75.100000000000023 -3237"
+#!   BOUNDING_RECT="-75.100000000000023 -3237 549.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="IFC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_properties{}.data_type" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_properties{}.name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_properties{}.property_type" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ifc_property_set_name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="PropertySetDefinition"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="53"
+#!   FEAT_GEOMTYPE="obj_face"
+#!   POSITION="3100 -3237"
+#!   BOUNDING_RECT="3100 -3237 549.09999999999991 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <READER_DATASETS>
+#! <DATASET
+#!   NAME="IFC_1"
+#!   OVERRIDE="-IFC_1_DATASET"
+#!   DATASET="IFC_1/MEL-TRA-LIL Métro Lille-Europe.ifc"
+#! />
+#! </READER_DATASETS>
+#! <WRITER_DATASETS>
+#! <DATASET
+#!   NAME="OBJ_1"
+#!   OVERRIDE="-OBJ_1_DATASET"
+#!   DATASET="OBJ_1/test"
+#! />
+#! </WRITER_DATASETS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_IFC IFC_File(*.ifc;*.ifcxml)|*.ifc;*.ifcxml|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_files(*)|* Source Industry Foundation Class (IFC) File(s):"
+#!   DEFAULT_VALUE="E:\2021_lille_gare_lille_europe\maillages\MEL-TRA-LIL Métro Lille-Europe.ifc"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI DIRNAME DestDataset_OBJ Destination OBJ Folder:"
+#!   DEFAULT_VALUE="E:\2021_lille_gare_lille_europe\maillages\test"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="80"
+#!   NAME="Reader Feature Types"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-202.10000000000002 -14.5"
+#!   ORDER="500000000000000"
+#!   PALETTE_COLOR="Reader/Writer"
+#!   BOTTOM_RIGHT="589 -3380"
+#!   BOUNDING_RECT="-202.10000000000002 -14.5 791.10000000000002 3365.5"
+#!   STICKY="true"
+#!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,1"
+#!   CONTENTS="8 16 22 34 12 32 26 4 24 10 52 36 18 50 2 30 6 46 14 38 42 48 40 44 20 28 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="81"
+#!   NAME="Writer Feature Types"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="3035 -14.5"
+#!   ORDER="500000000000000"
+#!   PALETTE_COLOR="Reader/Writer"
+#!   BOTTOM_RIGHT="3821.0999999999999 -3380"
+#!   BOUNDING_RECT="3035 -14.5 786.09999999999991 3365.5"
+#!   STICKY="true"
+#!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,1"
+#!   CONTENTS="23 43 9 7 29 37 5 39 25 11 21 17 41 49 13 31 47 45 15 3 35 51 33 19 53 27 "
+#! >
+#! </BOOKMARK>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="54"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="55"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="56"
+#!   SOURCE_NODE="6"
+#!   TARGET_NODE="7"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="57"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="9"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="58"
+#!   SOURCE_NODE="10"
+#!   TARGET_NODE="11"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="59"
+#!   SOURCE_NODE="12"
+#!   TARGET_NODE="13"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="60"
+#!   SOURCE_NODE="14"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="61"
+#!   SOURCE_NODE="16"
+#!   TARGET_NODE="17"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="62"
+#!   SOURCE_NODE="18"
+#!   TARGET_NODE="19"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="63"
+#!   SOURCE_NODE="20"
+#!   TARGET_NODE="21"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="64"
+#!   SOURCE_NODE="22"
+#!   TARGET_NODE="23"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="65"
+#!   SOURCE_NODE="24"
+#!   TARGET_NODE="25"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="66"
+#!   SOURCE_NODE="26"
+#!   TARGET_NODE="27"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="67"
+#!   SOURCE_NODE="28"
+#!   TARGET_NODE="29"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="68"
+#!   SOURCE_NODE="30"
+#!   TARGET_NODE="31"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="69"
+#!   SOURCE_NODE="32"
+#!   TARGET_NODE="33"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="70"
+#!   SOURCE_NODE="34"
+#!   TARGET_NODE="35"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="71"
+#!   SOURCE_NODE="36"
+#!   TARGET_NODE="37"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="72"
+#!   SOURCE_NODE="38"
+#!   TARGET_NODE="39"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="73"
+#!   SOURCE_NODE="40"
+#!   TARGET_NODE="41"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="74"
+#!   SOURCE_NODE="42"
+#!   TARGET_NODE="43"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="75"
+#!   SOURCE_NODE="44"
+#!   TARGET_NODE="45"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="76"
+#!   SOURCE_NODE="46"
+#!   TARGET_NODE="47"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="77"
+#!   SOURCE_NODE="48"
+#!   TARGET_NODE="49"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="78"
+#!   SOURCE_NODE="50"
+#!   TARGET_NODE="51"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="79"
+#!   SOURCE_NODE="52"
+#!   TARGET_NODE="53"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 37
+GUI IGNORE SourceDataset_IFC_1,IFC_IN_READER_VERSION_IFC_1,IFC_IN_READER_OPTIONS_IFC_1,IFC_IN_VERSION_OVERRIDE_IFC_1,IFC_IN_READ_ALL_REPRESENTATIONS_IFC_1,IFC_IN_PREDEFINED_REPRESENTATION_IDENTIFIERS_IFC_1,IFC_IN_ADDITIONAL_REPRESENTATION_IDENTIFIERS_IFC_1,IFC_IN_PQSET_GROUP_IFC_1,IFC_IN_TYPEOBJECT_GROUP_IFC_1,IFC_IN_MERGE_TYPE_OBJECT_PQSETS_IFC_1,IFC_IN_DEPRECATED_READER_OPTIONS_IFC_1,IFC_IN_SPLIT_REPRESENTATIONS_IFC_1,IFC_IN_CONTEXT_TYPES_IFC_1,IFC_IN_REPRESENTATION_IDENTIFIERS_IFC_1,IFC_IN_REPRESENTATION_TYPES_IFC_1,IFC_IN_FME_GROUP_NAMED2_IFC_1,IFC_IN_IFCSPACE_GEOMETRY_IFC_1,IFC_IN_SUBTRACT_OPENINGS_IFC_1,IFC_IN_ADD_PROJECTIONS_IFC_1,IFC_IN_EVALUATE_CSG_SOLIDS_IFC_1,IFC_IN_SIMPLIFY_BASE_FACES_IFC_1,IFC_IN_FME_GROUP_NAMED3_IFC_1,IFC_IN_STRING_ENCODING_IFC_1,IFC_IN_USE_SEARCH_ENVELOPE_IFC_1,IFC_IN_SEARCH_ENVELOPE_MINX_IFC_1,IFC_IN_SEARCH_ENVELOPE_MINY_IFC_1,IFC_IN_SEARCH_ENVELOPE_MAXX_IFC_1,IFC_IN_SEARCH_ENVELOPE_MAXY_IFC_1,IFC_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_IFC_1,IFC_IN_CLIP_TO_ENVELOPE_IFC_1,IFC_IN_NETWORK_AUTHENTICATION_IFC_1,DestDataset_OBJ_1,OBJ_OUT_FME_GROUP_NAMED1_OBJ_1,OBJ_OUT_MOVE_TO_LOCAL_COORDSYS_OBJ_1,OBJ_OUT_FME_GROUP_NAMED2_OBJ_1,OBJ_OUT_REVERSE_FACE_ORDER_OBJ_1,OBJ_OUT_TRIANGULATE_FACES_OBJ_1,OBJ_OUT_WRITE_POINTS_AND_LINES_OBJ_1,OBJ_OUT_WRITE_MESH_VERTEX_COLORS_OBJ_1,OBJ_OUT_MATERIAL_LIB_OBJ_1,OBJ_OUT_MATERIAL_LIB_LINKAGE_OBJ_1,OBJ_OUT_FME_GROUP_NAMED3_OBJ_1,OBJ_OUT_TEXTURE_OUTPUT_FORMAT_OBJ_1,OBJ_OUT_OBJ_WRT_ADV_PARM_GROUP_OBJ_1,OBJ_OUT_WRITE_FME_VERSION_OBJ_1
+DEFAULT_MACRO SourceDataset_IFC E:\2021_lille_gare_lille_europe\maillages\MEL-TRA-LIL Métro Lille-Europe.ifc
+GUI MULTIFILE SourceDataset_IFC IFC_File(*.ifc;*.ifcxml)|*.ifc;*.ifcxml|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_files(*)|* Source Industry Foundation Class (IFC) File(s):
+DEFAULT_MACRO DestDataset_OBJ E:\2021_lille_gare_lille_europe\maillages\test
+GUI DIRNAME DestDataset_OBJ Destination OBJ Folder:
+INCLUDE [ if {{$(SourceDataset_IFC)} == {}} { puts_real {Parameter 'SourceDataset_IFC' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_OBJ)} == {}} { puts_real {Parameter 'DestDataset_OBJ' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! encoding="utf-8"
+#! WORKSPACE_VERSION 1
+# ============================================================================ 
+# 
+# This mapping file was generated by FME Workbench
+# on 11/16/21 for translation between IFC and OBJ
+# 
+# This workspace was generated with FME build 20806
+#
+# You may edit this mapping file to customize its operation.  Comments are 
+# placed throughout to assist you. 
+# 
+# Modification History:
+# 
+#     Name              Date     Description
+#     ================= ======== =============================================
+# 
+# 
+# ============================================================================ 
+# ============================================================================ 
+# The following line defines the title presented to the user when this
+# mapping file is run through the FME GUI.  You may modify this
+# if a more meaningful title would be appropriate.
+GUI TITLE IFC to OBJ Translation 
+# ============================================================================ 
+# The following line names the log file to which useful statistics about
+# the translation will be written.  This line can be uncommented and
+# updated if you do wish to keep these statistics.
+# LOG_FILENAME translation.log
+# LOG_APPEND NO
+# ============================================================================ 
+# The following line instructs the FME to log any features that do not
+# match any of the source feature patterns listed further down in
+# this file.  If you are modifying this mapping file, this will be
+# useful to describe to you exactly which features you are losing
+# during translation, if the statistics indicate that features are
+# not being correlated or grouped.  Uncorrelated features do not
+# match any source specification, ungrouped features do not have
+# any corresponding _DEF line. 
+# FME_DEBUG UNGROUPED UNCORRELATED
+# ============================================================================ 
+# The following two lines define the type of reader and writer to be
+# used for this translation.  If you want to translate your data
+# back into its original format, you may make a copy of this file
+# and switch the reader and writer types.  If you rerun the FME, you
+# will get your original data back again (together with any modifications
+# you made in the meantime).  Note that several formats are NOT
+# bi-directional (for example, GIF can only be used as a WRITER)
+# so a reverse translation may not always be possible.
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} IFC
+MULTI_READER_KEYWORD{0} IFC_1
+MULTI_READER_GEN_DIRECTIVES{0} READER_VERSION,2014,READER_OPTIONS,FME_DISCLOSURE_OPEN,VERSION_OVERRIDE,auto-detect,READER_MODE,Relational,READ_ALL_REPRESENTATIONS,YES,PREDEFINED_REPRESENTATION_IDENTIFIERS,<lt>Unused<gt>,ADDITIONAL_REPRESENTATION_IDENTIFIERS,<lt>Unused<gt>,CREATE_PQSET_DEFINITION_FEATURES,Yes,PQSET_READ_MODE,GEOMETRIES,TYPE_OBJECT_READ_MODE,MERGED,MERGE_TYPE_OBJECT_PQSETS,YES,SPLIT_REPRESENTATIONS,<lt>Unused<gt>,CONTEXT_TYPES,<lt>Unused<gt>,REPRESENTATION_IDENTIFIERS,<lt>Unused<gt>,REPRESENTATION_TYPES,<lt>Unused<gt>,IFCSPACE_GEOMETRY,No,SUBTRACT_OPENINGS,Yes,ADD_PROJECTIONS,Yes,EVALUATE_CSG_SOLIDS,No,SIMPLIFY_BASE_FACES,No,USE_SEARCH_ENVELOPE,NO,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,CLIP_TO_ENVELOPE,NO,SourceDataset,E:<backslash>2021_lille_gare_lille_europe<backslash>maillages<backslash>MEL-TRA-LIL<space>M<u00e9>tro<space>Lille-Europe.ifc,CoordSys,EPSG:3950,FME_GEOMETRY_HANDLING,Enhanced
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} OBJ
+MULTI_WRITER_KEYWORD{0} OBJ_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "IFC_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER IFC IFC_1
+# =====================================================================
+# The following GUI line prompts for a file to be used as the source
+# IFC file. The user input is stored in a macro, which is then
+# used to define the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_IFC_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER IFC IFC_1
+DEFAULT_MACRO SourceDataset_IFC_1 $(SourceDataset_IFC)
+GUI MULTIFILE SourceDataset_IFC_1 IFC_File(*.ifc;*.ifcxml)|*.ifc;*.ifcxml|All_files(*)|* Source Industry Foundation Class (IFC) File(s):
+DEFAULT_MACRO IFC_IN_READER_VERSION_IFC_1 2014
+IFC_1_READER_VERSION "$(IFC_IN_READER_VERSION_IFC_1)"
+GUI ACTIVECHOICE_LOOKUP IFC_IN_READER_VERSION_IFC_1 No,2014,IFC_IN_DEPRECATED_READER_OPTIONS_IFC_1,++IFC_IN_READER_OPTIONS_IFC_1+FME_DISCLOSURE_OPEN%Yes,CLASSIC,IFC_IN_READER_OPTIONS_IFC_1,++IFC_IN_DEPRECATED_READER_OPTIONS_IFC_1+FME_DISCLOSURE_OPEN,IFC_IN_EVALUATE_CSG_SOLIDS_IFC_1,IFC_IN_ADD_PROJECTIONS_IFC_1,IFC_IN_SIMPLIFY_BASE_FACES_IFC_1 Use Deprecated Reader:
+DEFAULT_MACRO IFC_IN_READER_OPTIONS_IFC_1 FME_DISCLOSURE_OPEN
+IFC_1_READER_OPTIONS "$(IFC_IN_READER_OPTIONS_IFC_1)"
+GUI OPTIONAL DISCLOSUREGROUP IFC_IN_READER_OPTIONS_IFC_1 IFC_IN_VERSION_OVERRIDE_IFC_1%IFC_IN_READER_MODE%IFC_IN_READ_ALL_REPRESENTATIONS_IFC_1%IFC_IN_PREDEFINED_REPRESENTATION_IDENTIFIERS_IFC_1%IFC_IN_ADDITIONAL_REPRESENTATION_IDENTIFIERS_IFC_1%IFC_IN_PQSET_GROUP_IFC_1%IFC_IN_TYPEOBJECT_GROUP_IFC_1 Reader Parameters
+DEFAULT_MACRO IFC_IN_VERSION_OVERRIDE_IFC_1 auto-detect
+IFC_1_VERSION_OVERRIDE "$(IFC_IN_VERSION_OVERRIDE_IFC_1)"
+GUI LOOKUP_CHOICE IFC_IN_VERSION_OVERRIDE_IFC_1 <auto<space>detect>,auto-detect%IFC4.1,IFC4x1%IFC4,IFC4%IFC2x3,IFC2x3%IFC2x2,IFC2x2 IFC Version
+DEFAULT_MACRO IFC_IN_READER_MODE_IFC_1 Relational
+IFC_1_READER_MODE "$(IFC_IN_READER_MODE_IFC_1)"
+DEFAULT_MACRO IFC_IN_READ_ALL_REPRESENTATIONS_IFC_1 YES
+IFC_1_READ_ALL_REPRESENTATIONS "$(IFC_IN_READ_ALL_REPRESENTATIONS_IFC_1)"
+GUI ACTIVECHOICE_LOOKUP IFC_IN_READ_ALL_REPRESENTATIONS_IFC_1 Yes,YES,IFC_IN_PREDEFINED_REPRESENTATION_IDENTIFIERS_IFC_1,IFC_IN_ADDITIONAL_REPRESENTATION_IDENTIFIERS_IFC_1%No,NO Read all Geometric Representations
+DEFAULT_MACRO IFC_IN_PREDEFINED_REPRESENTATION_IDENTIFIERS_IFC_1 <Unused>
+IFC_1_PREDEFINED_REPRESENTATION_IDENTIFIERS "$(IFC_IN_PREDEFINED_REPRESENTATION_IDENTIFIERS_IFC_1)"
+GUI NO_SORT LISTBOX IFC_IN_PREDEFINED_REPRESENTATION_IDENTIFIERS_IFC_1 Box%Annotation%Axis%FootPrint%Profile%Surface%Body%Body-Fallback%Clearance%Lighting Representations to Read
+DEFAULT_MACRO IFC_IN_ADDITIONAL_REPRESENTATION_IDENTIFIERS_IFC_1 <Unused>
+IFC_1_ADDITIONAL_REPRESENTATION_IDENTIFIERS "$(IFC_IN_ADDITIONAL_REPRESENTATION_IDENTIFIERS_IFC_1)"
+GUI OPTIONAL TEXT IFC_IN_ADDITIONAL_REPRESENTATION_IDENTIFIERS_IFC_1 Additional Representations to Read
+DEFAULT_MACRO IFC_IN_PQSET_GROUP_IFC_1 
+GUI OPTIONAL DISCLOSUREGROUP IFC_IN_PQSET_GROUP_IFC_1 IFC_IN_CREATE_PQSET_DEFINITION_FEATURES%IFC_IN_PQSET_READ_MODE Property/Quantity Set Parameters
+DEFAULT_MACRO IFC_IN_CREATE_PQSET_DEFINITION_FEATURES_IFC_1 Yes
+IFC_1_CREATE_PQSET_DEFINITION_FEATURES "$(IFC_IN_CREATE_PQSET_DEFINITION_FEATURES_IFC_1)"
+DEFAULT_MACRO IFC_IN_PQSET_READ_MODE_IFC_1 GEOMETRIES
+IFC_1_PQSET_READ_MODE "$(IFC_IN_PQSET_READ_MODE_IFC_1)"
+DEFAULT_MACRO IFC_IN_TYPEOBJECT_GROUP_IFC_1 
+GUI OPTIONAL DISCLOSUREGROUP IFC_IN_TYPEOBJECT_GROUP_IFC_1 IFC_IN_TYPE_OBJECT_READ_MODE%IFC_IN_MERGE_TYPE_OBJECT_PQSETS_IFC_1 Type Object Parameters
+DEFAULT_MACRO IFC_IN_TYPE_OBJECT_READ_MODE_IFC_1 MERGED
+IFC_1_TYPE_OBJECT_READ_MODE "$(IFC_IN_TYPE_OBJECT_READ_MODE_IFC_1)"
+DEFAULT_MACRO IFC_IN_MERGE_TYPE_OBJECT_PQSETS_IFC_1 YES
+IFC_1_MERGE_TYPE_OBJECT_PQSETS "$(IFC_IN_MERGE_TYPE_OBJECT_PQSETS_IFC_1)"
+GUI LOOKUP_CHOICE IFC_IN_MERGE_TYPE_OBJECT_PQSETS_IFC_1 Yes,YES%No,NO Merge Property/Quantity Sets of Type Objects into Property/Quantity Sets of Real Objects
+DEFAULT_MACRO IFC_IN_DEPRECATED_READER_OPTIONS_IFC_1 
+GUI OPTIONAL DISCLOSUREGROUP IFC_IN_DEPRECATED_READER_OPTIONS_IFC_1 IFC_IN_SPLIT_REPRESENTATIONS_IFC_1%IFC_IN_CONTEXT_TYPES_IFC_1%IFC_IN_REPRESENTATION_IDENTIFIERS_IFC_1%IFC_IN_REPRESENTATION_TYPES_IFC_1 Deprecated Reader Parameters
+DEFAULT_MACRO IFC_IN_SPLIT_REPRESENTATIONS_IFC_1 <Unused>
+IFC_1_SPLIT_REPRESENTATIONS "$(IFC_IN_SPLIT_REPRESENTATIONS_IFC_1)"
+GUI CHOICE IFC_IN_SPLIT_REPRESENTATIONS_IFC_1 Yes%No Split Multiple Representations:
+DEFAULT_MACRO IFC_IN_CONTEXT_TYPES_IFC_1 <Unused>
+IFC_1_CONTEXT_TYPES "$(IFC_IN_CONTEXT_TYPES_IFC_1)"
+GUI OPTIONAL TEXT IFC_IN_CONTEXT_TYPES_IFC_1 Representation Context Types to Read:
+DEFAULT_MACRO IFC_IN_REPRESENTATION_IDENTIFIERS_IFC_1 <Unused>
+IFC_1_REPRESENTATION_IDENTIFIERS "$(IFC_IN_REPRESENTATION_IDENTIFIERS_IFC_1)"
+GUI OPTIONAL TEXT IFC_IN_REPRESENTATION_IDENTIFIERS_IFC_1 Representation Identifiers to Read:
+DEFAULT_MACRO IFC_IN_REPRESENTATION_TYPES_IFC_1 <Unused>
+IFC_1_REPRESENTATION_TYPES "$(IFC_IN_REPRESENTATION_TYPES_IFC_1)"
+GUI OPTIONAL TEXT IFC_IN_REPRESENTATION_TYPES_IFC_1 Representation Types to Read:
+DEFAULT_MACRO IFC_IN_FME_GROUP_NAMED2_IFC_1 
+GUI OPTIONAL DISCLOSUREGROUP IFC_IN_FME_GROUP_NAMED2_IFC_1 IFC_IN_IFCSPACE_GEOMETRY_IFC_1%IFC_IN_SUBTRACT_OPENINGS_IFC_1%IFC_IN_ADD_PROJECTIONS_IFC_1%IFC_IN_EVALUATE_CSG_SOLIDS_IFC_1%IFC_IN_SIMPLIFY_BASE_FACES_IFC_1 Geometry
+DEFAULT_MACRO IFC_IN_IFCSPACE_GEOMETRY_IFC_1 No
+IFC_1_IFCSPACE_GEOMETRY "$(IFC_IN_IFCSPACE_GEOMETRY_IFC_1)"
+GUI CHOICE IFC_IN_IFCSPACE_GEOMETRY_IFC_1 Yes%No Read IfcSpace Geometries:
+DEFAULT_MACRO IFC_IN_SUBTRACT_OPENINGS_IFC_1 Yes
+IFC_1_SUBTRACT_OPENINGS "$(IFC_IN_SUBTRACT_OPENINGS_IFC_1)"
+GUI CHOICE IFC_IN_SUBTRACT_OPENINGS_IFC_1 Yes%No Subtract Opening Geometries:
+DEFAULT_MACRO IFC_IN_ADD_PROJECTIONS_IFC_1 Yes
+IFC_1_ADD_PROJECTIONS "$(IFC_IN_ADD_PROJECTIONS_IFC_1)"
+GUI CHOICE IFC_IN_ADD_PROJECTIONS_IFC_1 Yes%No Add Projecting Geometries:
+DEFAULT_MACRO IFC_IN_EVALUATE_CSG_SOLIDS_IFC_1 No
+IFC_1_EVALUATE_CSG_SOLIDS "$(IFC_IN_EVALUATE_CSG_SOLIDS_IFC_1)"
+GUI CHOICE IFC_IN_EVALUATE_CSG_SOLIDS_IFC_1 Yes%No Evaluate CSG Solids
+DEFAULT_MACRO IFC_IN_SIMPLIFY_BASE_FACES_IFC_1 No
+IFC_1_SIMPLIFY_BASE_FACES "$(IFC_IN_SIMPLIFY_BASE_FACES_IFC_1)"
+GUI CHOICE IFC_IN_SIMPLIFY_BASE_FACES_IFC_1 Yes%No Simplify Extrusion Base Faces
+DEFAULT_MACRO IFC_IN_FME_GROUP_NAMED3_IFC_1 
+GUI OPTIONAL DISCLOSUREGROUP IFC_IN_FME_GROUP_NAMED3_IFC_1 IFC_IN_STRING_ENCODING_IFC_1 Encoding
+DEFAULT_MACRO IFC_IN_STRING_ENCODING_IFC_1 
+IFC_1_STRING_ENCODING "$(IFC_IN_STRING_ENCODING_IFC_1)"
+GUI OPTIONAL ENCODING IFC_IN_STRING_ENCODING_IFC_1 * String Encoding:
+DEFAULT_MACRO IFC_IN_EXPOSE_ATTRS_GROUP_IFC_1 
+IFC_1_EXPOSE_ATTRS_GROUP "$(IFC_IN_EXPOSE_ATTRS_GROUP_IFC_1)"
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+DEFAULT_MACRO IFC_IN_USE_SEARCH_ENVELOPE_IFC_1 NO
+IFC_1_USE_SEARCH_ENVELOPE "$(IFC_IN_USE_SEARCH_ENVELOPE_IFC_1)"
+GUI ACTIVEDISCLOSUREGROUP IFC_IN_USE_SEARCH_ENVELOPE_IFC_1 IFC_IN_SEARCH_ENVELOPE_MINX_IFC_1%IFC_IN_SEARCH_ENVELOPE_MINY_IFC_1%IFC_IN_SEARCH_ENVELOPE_MAXX_IFC_1%IFC_IN_SEARCH_ENVELOPE_MAXY_IFC_1%IFC_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_IFC_1%IFC_IN_CLIP_TO_ENVELOPE_IFC_1%IFC_IN_SEARCH_METHOD%IFC_IN_SEARCH_METHOD_FILTER%IFC_IN_SEARCH_ORDER%IFC_IN_SEARCH_FEATURE%IFC_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
+# ===========================================================================
+GUI LOOKUP IFC_IN_SEARCH_ENVELOPE_MINX_IFC_1 <Unused>,0 
+DEFAULT_MACRO IFC_IN_SEARCH_ENVELOPE_MINX_IFC_1 0
+IFC_1_SEARCH_ENVELOPE "$(IFC_IN_SEARCH_ENVELOPE_MINX_IFC_1)"
+GUI OPTIONAL FLOAT IFC_IN_SEARCH_ENVELOPE_MINX_IFC_1 Minimum X:
+# ===========================================================================
+GUI LOOKUP IFC_IN_SEARCH_ENVELOPE_MINY_IFC_1 <Unused>,0 
+DEFAULT_MACRO IFC_IN_SEARCH_ENVELOPE_MINY_IFC_1 0
+IFC_1_SEARCH_ENVELOPE "$(IFC_IN_SEARCH_ENVELOPE_MINY_IFC_1)"
+GUI OPTIONAL FLOAT IFC_IN_SEARCH_ENVELOPE_MINY_IFC_1 Minimum Y:
+# ===========================================================================
+GUI LOOKUP IFC_IN_SEARCH_ENVELOPE_MAXX_IFC_1 <Unused>,0 
+DEFAULT_MACRO IFC_IN_SEARCH_ENVELOPE_MAXX_IFC_1 0
+IFC_1_SEARCH_ENVELOPE "$(IFC_IN_SEARCH_ENVELOPE_MAXX_IFC_1)"
+GUI OPTIONAL FLOAT IFC_IN_SEARCH_ENVELOPE_MAXX_IFC_1 Maximum X:
+# ===========================================================================
+GUI LOOKUP IFC_IN_SEARCH_ENVELOPE_MAXY_IFC_1 <Unused>,0 
+DEFAULT_MACRO IFC_IN_SEARCH_ENVELOPE_MAXY_IFC_1 0
+IFC_1_SEARCH_ENVELOPE "$(IFC_IN_SEARCH_ENVELOPE_MAXY_IFC_1)"
+GUI OPTIONAL FLOAT IFC_IN_SEARCH_ENVELOPE_MAXY_IFC_1 Maximum Y:
+# ===========================================================================
+GUI LOOKUP IFC_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_IFC_1 <Unused>, 
+DEFAULT_MACRO IFC_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_IFC_1 
+IFC_1_SEARCH_ENVELOPE "$(IFC_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_IFC_1)"
+GUI OPTIONAL COORDSYS IFC_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_IFC_1 Search Envelope Coordinate System:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+GUI LOOKUP IFC_IN_CLIP_TO_ENVELOPE_IFC_1 <Unused>,NO 
+DEFAULT_MACRO IFC_IN_CLIP_TO_ENVELOPE_IFC_1 NO
+IFC_1_CLIP_TO_ENVELOPE "$(IFC_IN_CLIP_TO_ENVELOPE_IFC_1)"
+GUI OPTIONAL CHECKBOX IFC_IN_CLIP_TO_ENVELOPE_IFC_1 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO IFC_IN_NETWORK_AUTHENTICATION_IFC_1 
+IFC_1_NETWORK_AUTHENTICATION "$(IFC_IN_NETWORK_AUTHENTICATION_IFC_1)"
+GUI OPTIONAL AUTHENTICATOR IFC_IN_NETWORK_AUTHENTICATION_IFC_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO IFC_IN_ATTRIBUTE_READING_IFC_1 ALL
+IFC_1_ATTRIBUTE_READING "$(IFC_IN_ATTRIBUTE_READING_IFC_1)"
+# ============================================================================ 
+IFC_1_GENERATE_FME_BUILD_NUM 20806
+IFC_1_DATASET "$(SourceDataset_IFC_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "OBJ_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER OBJ OBJ_1
+# The dataset this mapping file was generated for was:
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_OBJ_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER OBJ OBJ_1
+DEFAULT_MACRO DestDataset_OBJ_1 $(DestDataset_OBJ)
+GUI DIRNAME DestDataset_OBJ_1 Destination OBJ Folder:
+DEFAULT_MACRO OBJ_OUT_FME_GROUP_NAMED1_OBJ_1 
+GUI OPTIONAL DISCLOSUREGROUP OBJ_OUT_FME_GROUP_NAMED1_OBJ_1 OBJ_OUT_MOVE_TO_LOCAL_COORDSYS_OBJ_1 Coordinate System
+DEFAULT_MACRO OBJ_OUT_MOVE_TO_LOCAL_COORDSYS_OBJ_1 No
+OBJ_1_MOVE_TO_LOCAL_COORDSYS "$(OBJ_OUT_MOVE_TO_LOCAL_COORDSYS_OBJ_1)"
+GUI LOOKUP_CHOICE OBJ_OUT_MOVE_TO_LOCAL_COORDSYS_OBJ_1 Yes,Yes%No,No%"\"Create Projection File Only\",PRJ_ONLY"%"\"Transform Coordinates Only\",COORDINATES_ONLY" Move to Local Coordinate System:
+DEFAULT_MACRO OBJ_OUT_FME_GROUP_NAMED2_OBJ_1 
+GUI OPTIONAL DISCLOSUREGROUP OBJ_OUT_FME_GROUP_NAMED2_OBJ_1 OBJ_OUT_REVERSE_FACE_ORDER_OBJ_1%OBJ_OUT_TRIANGULATE_FACES_OBJ_1%OBJ_OUT_WRITE_POINTS_AND_LINES_OBJ_1%OBJ_OUT_WRITE_MESH_VERTEX_COLORS_OBJ_1 Feature Handling
+DEFAULT_MACRO OBJ_OUT_REVERSE_FACE_ORDER_OBJ_1 No
+OBJ_1_REVERSE_FACE_ORDER "$(OBJ_OUT_REVERSE_FACE_ORDER_OBJ_1)"
+GUI CHOICE OBJ_OUT_REVERSE_FACE_ORDER_OBJ_1 Yes%No Reverse Face Order:
+DEFAULT_MACRO OBJ_OUT_TRIANGULATE_FACES_OBJ_1 Yes
+OBJ_1_TRIANGULATE_FACES "$(OBJ_OUT_TRIANGULATE_FACES_OBJ_1)"
+GUI CHOICE OBJ_OUT_TRIANGULATE_FACES_OBJ_1 Yes%No Triangulate Faces:
+DEFAULT_MACRO OBJ_OUT_WRITE_POINTS_AND_LINES_OBJ_1 No
+OBJ_1_WRITE_POINTS_AND_LINES "$(OBJ_OUT_WRITE_POINTS_AND_LINES_OBJ_1)"
+GUI CHOICE OBJ_OUT_WRITE_POINTS_AND_LINES_OBJ_1 Yes%No Write Points and Lines:
+DEFAULT_MACRO OBJ_OUT_WRITE_MESH_VERTEX_COLORS_OBJ_1 Yes
+OBJ_1_WRITE_MESH_VERTEX_COLORS "$(OBJ_OUT_WRITE_MESH_VERTEX_COLORS_OBJ_1)"
+GUI CHOICE OBJ_OUT_WRITE_MESH_VERTEX_COLORS_OBJ_1 Yes%No Write Mesh Vertex Colors:
+DEFAULT_MACRO OBJ_OUT_MATERIAL_LIB_OBJ_1 
+OBJ_1_MATERIAL_LIB "$(OBJ_OUT_MATERIAL_LIB_OBJ_1)"
+GUI OPTIONAL FILENAME_MUSTEXIST OBJ_OUT_MATERIAL_LIB_OBJ_1 Material_Library_File(*.mtl)|*.mtl|All_files(*)|* Material Library File:
+GUI LOOKUP OBJ_OUT_MATERIAL_LIB_OBJ_1 <Unused>, 
+DEFAULT_MACRO OBJ_OUT_MATERIAL_LIB_LINKAGE_OBJ_1 Relative
+OBJ_1_MATERIAL_LIB_LINKAGE "$(OBJ_OUT_MATERIAL_LIB_LINKAGE_OBJ_1)"
+GUI CHOICE OBJ_OUT_MATERIAL_LIB_LINKAGE_OBJ_1 Relative%Absolute%Copy Material Library Linkage:
+GUI LOOKUP OBJ_OUT_MATERIAL_LIB_LINKAGE_OBJ_1 <Unused>,Relative 
+DEFAULT_MACRO OBJ_OUT_FME_GROUP_NAMED3_OBJ_1 
+GUI OPTIONAL DISCLOSUREGROUP OBJ_OUT_FME_GROUP_NAMED3_OBJ_1 OBJ_OUT_TEXTURE_OUTPUT_FORMAT_OBJ_1 Textures
+DEFAULT_MACRO OBJ_OUT_TEXTURE_OUTPUT_FORMAT_OBJ_1 NONE
+OBJ_1_TEXTURE_OUTPUT_FORMAT "$(OBJ_OUT_TEXTURE_OUTPUT_FORMAT_OBJ_1)"
+GUI LOOKUP_CHOICE OBJ_OUT_TEXTURE_OUTPUT_FORMAT_OBJ_1 Auto,NONE%PNG,PNGRASTER%JPEG%GIF,GIFRASTER%BMP%XPM%TIFF Preferred Texture Format:
+DEFAULT_MACRO OBJ_OUT_OBJ_WRT_ADV_PARM_GROUP_OBJ_1 
+GUI OPTIONAL DISCLOSUREGROUP OBJ_OUT_OBJ_WRT_ADV_PARM_GROUP_OBJ_1 OBJ_OUT_WRITE_FME_VERSION_OBJ_1 Advanced
+DEFAULT_MACRO OBJ_OUT_WRITE_FME_VERSION_OBJ_1 Yes
+OBJ_1_WRITE_FME_VERSION "$(OBJ_OUT_WRITE_FME_VERSION_OBJ_1)"
+GUI CHOICE OBJ_OUT_WRITE_FME_VERSION_OBJ_1 Yes%No Write FME Version to OBJ File Header:
+DEFAULT_MACRO OBJ_OUT_LOCAL_COORDSYS_TRANSFORMATION_OBJ_1 OFFSET_CENTROID_TO_ORIGIN
+OBJ_1_LOCAL_COORDSYS_TRANSFORMATION "$(OBJ_OUT_LOCAL_COORDSYS_TRANSFORMATION_OBJ_1)"
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO OBJ_OUT_DESTINATION_DATASETTYPE_VALIDATION_OBJ_1 Yes
+OBJ_1_DESTINATION_DATASETTYPE_VALIDATION "$(OBJ_OUT_DESTINATION_DATASETTYPE_VALIDATION_OBJ_1)"
+# ============================================================================ 
+OBJ_1_GENERATE_FME_BUILD_NUM 20806
+OBJ_1_DATASET "$(DestDataset_OBJ_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)ifc2obj.log"
+LOG_APPEND NO
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+DEFAULT_MACRO DATASET_KEYWORD_IFC_1 IFC_1
+DEFAULT_MACRO DATASET_KEYWORD_OBJ_1 OBJ_1
+# -------------------------------------------------------------------------
+
+IFC_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+IFC_1_COORDINATE_SYSTEM EPSG:3950
+OBJ_1_COORDINATE_SYSTEM EPSG:3950
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME ifc2obj
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcWall   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcColumn   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcStair   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   ShapeType                    enumeration   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcSlab   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   PredefinedType               enumeration   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcMember   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcBeam   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcStairFlight   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   NumberOfRiser                int   NumberOfTreads               int   RiserHeight                  real   TreadLength                  real   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcBuildingElementProxy   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   CompositionType              enumeration   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcRoof   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   ShapeType                    enumeration   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcFlowTerminal   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcFurnishingElement   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcRailing   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   PredefinedType               enumeration   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcSpace   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   LongName                     string   CompositionType              enumeration   InteriorOrExteriorSpace      enumeration   ElevationWithFlooring        real   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF PropertySetDefinition   ifc_properties{}.data_type   string   ifc_properties{}.name        string   ifc_properties{}.property_type string   ifc_property_set_name        string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcBuildingStorey   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   LongName                     string   CompositionType              enumeration   Elevation                    real   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcFlowSegment   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcProject   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   LongName                     string   Phase                        string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcWallStandardCase   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcSite   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   LongName                     string   CompositionType              string   RefLatitude                  real   RefLongitude                 real   RefElevation                 real   LandTitleNumber              string   SiteAddress.Purpose          enumeration   SiteAddress.Description      string   SiteAddress.UserDefinedPurpose string   SiteAddress.InternalLocation string   SiteAddress.AddressLines     string   SiteAddress.PostalBox        string   SiteAddress.Town             string   SiteAddress.Region           string   SiteAddress.PostalCode       string   SiteAddress.Country          string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcDoor   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   OverallHeight                real   OverallWidth                 real   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcOpeningElement   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcRamp   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   ShapeType                    enumeration   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcTypeObject   ifc_type_name                string   GlobalId                     char(22)   Name                         string   Description                  string   ApplicableOccurrence         string   Tag                          string   ElementType                  string   PredefinedType               string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcBuilding   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   LongName                     string   CompositionType              string   ElevationOfRefHeight         real   ElevationOfTerrain           real   BuildingAddress.Purpose      enumeration   BuildingAddress.Description  string   BuildingAddress.UserDefinedPurpose string   BuildingAddress.InternalLocation string   BuildingAddress.AddressLines string   BuildingAddress.PostalBox    string   BuildingAddress.Town         string   BuildingAddress.Region       string   BuildingAddress.PostalCode   string   BuildingAddress.Country      string   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+IFC_1_DEF QuantitySetDefinition   ifc_quantities{}.name        string   ifc_quantities{}.type        string   ifc_quantity_set_name        string
+# -------------------------------------------------------------------------
+IFC_1_DEF IfcWindow   GlobalId                     char(22)   Name                         string   Description                  string   ObjectType                   string   Tag                          string   OverallHeight                real   OverallWidth                 real   Axis                         geometry   Body                         geometry   Box                          geometry   FootPrint                    geometry   ifc_type_object_id           string
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_IFC_1)   INPUT FEATURE_TYPE *    ROUTE IFC IFC_1::IfcWall multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcWall ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcColumn multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcColumn ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcStair multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcStair ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcSlab multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcSlab ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcMember multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcMember ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcBeam multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcBeam ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcStairFlight multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcStairFlight ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcBuildingElementProxy multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcBuildingElementProxy ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcRoof multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcRoof ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcFlowTerminal multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcFlowTerminal ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcFurnishingElement multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcFurnishingElement ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcRailing multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcRailing ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcSpace multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcSpace ALIAS_GEOMETRY    ROUTE IFC IFC_1::PropertySetDefinition multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::PropertySetDefinition ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcBuildingStorey multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcBuildingStorey ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcFlowSegment multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcFlowSegment ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcProject multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcProject ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcWallStandardCase multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcWallStandardCase ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcSite multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcSite ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcDoor multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcDoor ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcOpeningElement multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcOpeningElement ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcRamp multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcRamp ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcTypeObject multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcTypeObject ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcBuilding multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcBuilding ALIAS_GEOMETRY    ROUTE IFC IFC_1::QuantitySetDefinition multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::QuantitySetDefinition ALIAS_GEOMETRY    ROUTE IFC IFC_1::IfcWindow multi_reader_keyword,$(DATASET_KEYWORD_IFC_1) TO FME_GENERIC ::IfcWindow ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+IFC_1_MERGE_DEF IFC_1::IfcWall EXACT IfcWall
+IFC_1_MERGE_DEF IFC_1::IfcColumn EXACT IfcColumn
+IFC_1_MERGE_DEF IFC_1::IfcStair EXACT IfcStair
+IFC_1_MERGE_DEF IFC_1::IfcSlab EXACT IfcSlab
+IFC_1_MERGE_DEF IFC_1::IfcMember EXACT IfcMember
+IFC_1_MERGE_DEF IFC_1::IfcBeam EXACT IfcBeam
+IFC_1_MERGE_DEF IFC_1::IfcStairFlight EXACT IfcStairFlight
+IFC_1_MERGE_DEF IFC_1::IfcBuildingElementProxy EXACT IfcBuildingElementProxy
+IFC_1_MERGE_DEF IFC_1::IfcRoof EXACT IfcRoof
+IFC_1_MERGE_DEF IFC_1::IfcFlowTerminal EXACT IfcFlowTerminal
+IFC_1_MERGE_DEF IFC_1::IfcFurnishingElement EXACT IfcFurnishingElement
+IFC_1_MERGE_DEF IFC_1::IfcRailing EXACT IfcRailing
+IFC_1_MERGE_DEF IFC_1::IfcSpace EXACT IfcSpace
+IFC_1_MERGE_DEF IFC_1::PropertySetDefinition EXACT PropertySetDefinition
+IFC_1_MERGE_DEF IFC_1::IfcBuildingStorey EXACT IfcBuildingStorey
+IFC_1_MERGE_DEF IFC_1::IfcFlowSegment EXACT IfcFlowSegment
+IFC_1_MERGE_DEF IFC_1::IfcProject EXACT IfcProject
+IFC_1_MERGE_DEF IFC_1::IfcWallStandardCase EXACT IfcWallStandardCase
+IFC_1_MERGE_DEF IFC_1::IfcSite EXACT IfcSite
+IFC_1_MERGE_DEF IFC_1::IfcDoor EXACT IfcDoor
+IFC_1_MERGE_DEF IFC_1::IfcOpeningElement EXACT IfcOpeningElement
+IFC_1_MERGE_DEF IFC_1::IfcRamp EXACT IfcRamp
+IFC_1_MERGE_DEF IFC_1::IfcTypeObject EXACT IfcTypeObject
+IFC_1_MERGE_DEF IFC_1::IfcBuilding EXACT IfcBuilding
+IFC_1_MERGE_DEF IFC_1::QuantitySetDefinition EXACT QuantitySetDefinition
+IFC_1_MERGE_DEF IFC_1::IfcWindow EXACT IfcWindow
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcBeam_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcBeam    OUTPUT FEATURE_TYPE IfcBeam_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcBuilding_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcBuilding    OUTPUT FEATURE_TYPE IfcBuilding_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcBuildingElementProxy_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcBuildingElementProxy    OUTPUT FEATURE_TYPE IfcBuildingElementProxy_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcBuildingStorey_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcBuildingStorey    OUTPUT FEATURE_TYPE IfcBuildingStorey_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcColumn_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcColumn    OUTPUT FEATURE_TYPE IfcColumn_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcDoor_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcDoor    OUTPUT FEATURE_TYPE IfcDoor_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcFlowSegment_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcFlowSegment    OUTPUT FEATURE_TYPE IfcFlowSegment_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcFlowTerminal_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcFlowTerminal    OUTPUT FEATURE_TYPE IfcFlowTerminal_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcFurnishingElement_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcFurnishingElement    OUTPUT FEATURE_TYPE IfcFurnishingElement_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcMember_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcMember    OUTPUT FEATURE_TYPE IfcMember_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcOpeningElement_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcOpeningElement    OUTPUT FEATURE_TYPE IfcOpeningElement_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcProject_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcProject    OUTPUT FEATURE_TYPE IfcProject_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcRailing_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcRailing    OUTPUT FEATURE_TYPE IfcRailing_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcRamp_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcRamp    OUTPUT FEATURE_TYPE IfcRamp_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcRoof_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcRoof    OUTPUT FEATURE_TYPE IfcRoof_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcSite_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcSite    OUTPUT FEATURE_TYPE IfcSite_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcSlab_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcSlab    OUTPUT FEATURE_TYPE IfcSlab_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcSpace_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcSpace    OUTPUT FEATURE_TYPE IfcSpace_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcStair_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcStair    OUTPUT FEATURE_TYPE IfcStair_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcStairFlight_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcStairFlight    OUTPUT FEATURE_TYPE IfcStairFlight_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcTypeObject_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcTypeObject    OUTPUT FEATURE_TYPE IfcTypeObject_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcWall_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcWall    OUTPUT FEATURE_TYPE IfcWall_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcWallStandardCase_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcWallStandardCase    OUTPUT FEATURE_TYPE IfcWallStandardCase_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "IfcWindow_IFC_1 Splitter"    INPUT FEATURE_TYPE IfcWindow    OUTPUT FEATURE_TYPE IfcWindow_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "PropertySetDefinition_IFC_1 Splitter"    INPUT FEATURE_TYPE PropertySetDefinition    OUTPUT FEATURE_TYPE PropertySetDefinition_IFC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "QuantitySetDefinition_IFC_1 Splitter"    INPUT FEATURE_TYPE QuantitySetDefinition    OUTPUT FEATURE_TYPE QuantitySetDefinition_IFC_1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC IfcBeam_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcBeam<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcBuilding_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcBuilding<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcBuildingElementProxy_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcBuildingElementProxy<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcBuildingStorey_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcBuildingStorey<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcColumn_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcColumn<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcDoor_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcDoor<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcFlowSegment_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcFlowSegment<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcFlowTerminal_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcFlowTerminal<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcFurnishingElement_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcFurnishingElement<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcMember_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcMember<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcOpeningElement_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcOpeningElement<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcProject_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcProject<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcRailing_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcRailing<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcRamp_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcRamp<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcRoof_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcRoof<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcSite_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcSite<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcSlab_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcSlab<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcSpace_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcSpace<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcStair_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcStair<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcStairFlight_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcStairFlight<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcTypeObject_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcTypeObject<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcWall_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcWall<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcWallStandardCase_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcWallStandardCase<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC IfcWindow_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>IfcWindow<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC PropertySetDefinition_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>PropertySetDefinition<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY    ROUTE FME_GENERIC QuantitySetDefinition_IFC_1 TO OBJ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>QuantitySetDefinition<closeparen> COORDINATE_SYSTEM EPSG:3950 GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcWall
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcColumn
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcStair
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcSlab
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcMember
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcStairFlight
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcBeam
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcBuildingElementProxy
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcRoof
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcFlowTerminal
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcFurnishingElement
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcSpace
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcRailing
+# -------------------------------------------------------------------------
+OBJ_1_DEF PropertySetDefinition
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcBuildingStorey
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcFlowSegment
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcProject
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcWallStandardCase
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcSite
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcDoor
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcOpeningElement
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcTypeObject
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcRamp
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcBuilding
+# -------------------------------------------------------------------------
+OBJ_1_DEF QuantitySetDefinition
+# -------------------------------------------------------------------------
+OBJ_1_DEF IfcWindow
