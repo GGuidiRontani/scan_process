@@ -3,7 +3,8 @@ Classify the 2020 LiDAR dataset into ground and non-ground.
 
 # General presentation
 ### Tool
-PDAL 2.4.1.
+PDAL 2.4.1
+Rush
 ### Datas
 The dataset covers the all SCoT (administrative subdivision for urban management) of Lille Metropole. Its density is about 100pts/km².
 Transmitted as flightlines in las format, it has been compressed in squarred tiles of 500m with a 20m buffer in laz format 1.4 dataformat 8.
